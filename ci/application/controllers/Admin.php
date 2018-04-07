@@ -73,29 +73,11 @@ class Admin extends CI_Controller
         $this->load->model('Power');
         $query = $this->Power->fetch($ID);
         if ($query->num_rows() == 1)
-            {
-                $row = $query->row_array();
-                $this->session->set_userdata('editdata', $row);
-                redirect ('admin/fedit' , 'refresh');
-            }
-        /*
-        $data['query'] = $this->Power->fetch($ID);
-        $this->load->view ('flightedit' , $data);
-        if(isset($_POST['Update']))
         {
-            $newdata = array(
-                'FFrom' => $this->input->post('from'),
-                'TTo' => $this->input->post('to'),
-                'Date' => $this->input->post('date'),
-                'Departure' => $this->input->post('departure'),
-                'Arrival' => $this->input->post('arrival'),
-                'Duration' => $this->input->post('duration'),
-                'Price' => $this->input->post('price'),
-                'Seat' => $this->input->post('seat')
-            );
-            $this->Power->update($ID , $newdata);
+            $row = $query->row_array();
+            $this->session->set_userdata('editdata', $row);
+            redirect ('admin/fedit' , 'refresh');
         }
-        */
     }
     
     public function fedit()
