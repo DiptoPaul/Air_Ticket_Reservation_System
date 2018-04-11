@@ -7,6 +7,7 @@
 <body>
 <div class="login-page">
 <center><h1><font color="white">Sign In To Your Account</font></h1></center>
+<center><h2><a href="<?php echo site_url('auth/register') ?>">Or Register Here</a></h2></center>
 <div class="form">
 <form class="login-form" action = "" method = "POST">
 <input type = "email" name = "email" placeholder ="Email" required>

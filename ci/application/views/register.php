@@ -12,7 +12,7 @@
             });
         </script>
     </head>
-    <body class = "pink darken-3 white-text"  style = "padding : 7% 15%">
+    <body class = "blue-grey darken-3 indigo-text text-lighten-3"  style = "padding : 7% 15%">
         <h4>Create New Account</h4>
         <form class="col s12" action = "" method = "POST">
                 <div class="row">

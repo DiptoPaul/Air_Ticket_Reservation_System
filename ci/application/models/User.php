@@ -31,5 +31,30 @@ class User extends CI_Model
         }
         else echo "Sorry Could Not Update Data";
     }
+    
+    public function search($newdata)
+    {
+        $this->db->where('FFrom' , $newdata['FFrom']);
+        $this->db->where('TTo' , $newdata['TTo']);
+        $this->db->where('Date' , $newdata['Date']);
+        $this->db->where('Seat >', 0);
+        $query = $this->db->get('ftb');
+        return $query->result_array();
+    }
+    
+    public function book($ID)
+    {
+        $data = array(
+                'Flight_ID' => $ID,
+                'Passenger_ID' => $this->session->userdata['signed']['ID']
+        );
+        $query1 = $this->db->insert('ticket', $data);
+        $this->db->set('Seat', 'Seat-1', FALSE);
+        $this->db->where('ID', $ID);
+        $query2 = $this->db->update('ftb');
+        if ($query1 && $query2)
+           return true;
+        else return false;
+    }
 }
 ?>

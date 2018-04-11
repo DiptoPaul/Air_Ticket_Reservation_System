@@ -11,29 +11,43 @@ $this->load->view('login');
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
         <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
         <script type = "text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+        <style>
+            ul {
+                    margin : 0;
+                    padding : 0;
+                    overflow : hidden;
+                    list-style-type : none;
+                    background-color : Blue;
+                    font : 17px Arial Rounded MT Bold , sans-serif;
+                }
+
+            li a {
+                    float : left;
+                    color : white;
+                    display : block;
+                    text-align : center;
+                    padding : 15px 15px;
+                    text-decoration : none;
+                  }
+
+            li a:hover {
+                                background-color : Navy;
+                            }
+        </style>
         <script>
             $(document).ready(function() {
                 $('select').material_select();
             });
         </script>
     </head>
-    <body class = "pink darken-3 white-text"  style = "padding : 7% 15%">
-        
-  <nav class = "blue white-text" style = "font-family : Arial Rounded MT Bold">
-    <div class="nav-wrapper">
-      <ul class="left">
-        <li><a href="<?php echo site_url('auth/show') ?>">Show</a></li>
-        <li><a href="<?php echo site_url('auth/edit') ?>">Edit</a></li>
-        <li><a href="delete.php">Delete</a></li>
-      </ul>
-      <ul class="right">
-        <li><a href="<?php echo site_url('auth/logout') ?>">Log Out</a></li>
-        <li><a href="#"><?php echo $this->session->userdata['signed']['Name'] ?></a></li>
-        <li><a href="book.php">Book</a></li>
-      </ul>
-    </div>
-  </nav>
-        
+    <body class = "blue-grey darken-3 indigo-text text-lighten-3"  style = "padding : 7% 15%">
+        <ul>
+            <li><a href="<?php echo site_url('auth/show') ?>">View Profile</a></li>
+            <li><a href="<?php echo site_url('auth/edit') ?>">Edit Profile</a></li>
+            <li><a href="<?php echo site_url('auth/book') ?>">Book Flight</a></li>
+            <li style="float:right"><a href="<?php echo site_url('auth/logout') ?>">Log Out</a></li>
+            <li style="float:right"><a href="#"><?php echo "Signed In As : ".$this->session->userdata['signed']['Name'] ?></a></li>
+        </ul>
         <h4>Edit Your Profile</h4>
         <form class="col s12" action = "" method = "POST">
                 <div class="row">

@@ -33,6 +33,10 @@ $this->load->view('login');
             li a:hover {
                                 background-color : Navy;
                             }
+            h5 {
+                font : Arial Black , sans-serif;
+                color : White;
+                 }
         </style>
         <script>
             $(document).ready(function() {
@@ -50,10 +54,10 @@ $this->load->view('login');
     </head>
     <body class = "blue-grey darken-3 indigo-text text-lighten-3"  style = "padding : 7% 15%">
         <ul>
-            <li><a href="<?php echo site_url('admin/insert') ?>">Create New Flight Schedule</a></li>
-            <li><a href="<?php echo site_url('admin/show') ?>">View All Flights</a></li>
-            <li><a href="<?php echo site_url('admin/search') ?>">Search Flights</a></li>
-            <li style="float:right"><a href="<?php echo site_url('admin/logout') ?>">Log Out</a></li>
+            <li><a href="<?php echo site_url('auth/show') ?>">View Profile</a></li>
+            <li><a href="<?php echo site_url('auth/edit') ?>">Edit Profile</a></li>
+            <li><a href="<?php echo site_url('auth/book') ?>">Book Flight</a></li>
+            <li style="float:right"><a href="<?php echo site_url('auth/logout') ?>">Log Out</a></li>
             <li style="float:right"><a href="#"><?php echo "Signed In As : ".$this->session->userdata['signed']['Name'] ?></a></li>
         </ul>
         <h4>Search Flights</h4>

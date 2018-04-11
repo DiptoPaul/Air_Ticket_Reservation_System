@@ -71,13 +71,9 @@ class Admin extends CI_Controller
     public function edit($ID)
     {
         $this->load->model('Power');
-        $query = $this->Power->fetch($ID);
-        if ($query->num_rows() == 1)
-        {
-            $row = $query->row_array();
-            $this->session->set_userdata('editdata', $row);
-            redirect ('admin/fedit' , 'refresh');
-        }
+        $row = $this->Power->fetch($ID);
+        $this->session->set_userdata('editdata', $row);
+        redirect ('admin/fedit' , 'refresh');
     }
     
     public function fedit()
@@ -121,7 +117,7 @@ class Admin extends CI_Controller
             $newdata = array(
                 'FFrom' => $this->input->post('from'),
                 'TTo' => $this->input->post('to'),
-                'Date' => $this->input->post('date'),
+                'Date' => $this->input->post('date')
             );
             $this->load->model('Power');
             $data['query'] = $this->Power->search($newdata);

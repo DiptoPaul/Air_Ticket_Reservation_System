@@ -11,12 +11,11 @@ $this->load->view('login');
     </head>
     <body>
         <ul>
-            <li><a href="<?php echo site_url('auth/show') ?>">Show</a></li>
-            <li><a href="<?php echo site_url('auth/edit') ?>">Edit</a></li>
-            <li><a href="delete.php">Delete</a></li>
+            <li><a href="<?php echo site_url('auth/show') ?>">View Profile</a></li>
+            <li><a href="<?php echo site_url('auth/edit') ?>">Edit Profile</a></li>
+            <li><a href="<?php echo site_url('auth/book') ?>">Book Flight</a></li>
             <li style="float:right"><a href="<?php echo site_url('auth/logout') ?>">Log Out</a></li>
-            <li style="float:right"><a href="#"><?php echo $this->session->userdata['signed']['Name'] ?></a></li>
-            <li style="float:right"><a href="book.php">Book</a></li>
+            <li style="float:right"><a href="#"><?php echo "Signed In As : ".$this->session->userdata['signed']['Name'] ?></a></li>
         </ul>
         <h1>Your Profile</h1>
         <hr>

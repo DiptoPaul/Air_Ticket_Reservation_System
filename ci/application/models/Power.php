@@ -36,7 +36,7 @@ class Power extends CI_Model
     {
         $this->db->where('ID' , $ID);
         $query = $this->db->get('ftb');
-        return $query;
+        return $query->row_array();
     }
     
     public function delete($ID)

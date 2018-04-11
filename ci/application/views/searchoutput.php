@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 if (!isset($this->session->userdata['signed']))
 $this->load->view('login');
 ?>
@@ -6,29 +6,22 @@ $this->load->view('login');
 <!DOCTYPE html>
 <html>
     <head>
-        <title>View</title>
+        <title>Search Result</title>
         <link rel="stylesheet" href="<?php echo base_url(); ?>css/Sieses.css">
     </head>
     <body>
         <ul>
-            <li><a href="<?php echo site_url('admin/insert') ?>">Create New Flight Schedule</a></li>
-            <li><a href="<?php echo site_url('admin/show') ?>">View All Flights</a></li>
-            <li><a href="<?php echo site_url('admin/search') ?>">Search Flights</a></li>
-            <li style="float:right"><a href="<?php echo site_url('admin/logout') ?>">Log Out</a></li>
+            <li><a href="<?php echo site_url('auth/show') ?>">View Profile</a></li>
+            <li><a href="<?php echo site_url('auth/edit') ?>">Edit Profile</a></li>
+            <li><a href="<?php echo site_url('auth/book') ?>">Book Flight</a></li>
+            <li style="float:right"><a href="<?php echo site_url('auth/logout') ?>">Log Out</a></li>
             <li style="float:right"><a href="#"><?php echo "Signed In As : ".$this->session->userdata['signed']['Name'] ?></a></li>
         </ul>
-        <br>
-        <form action = "" method = "POST">
-            <b>ID</b> <input type = "number" name = "ID" required>
-            <input type="submit" name="Details" value="Details">
-            <input type="submit" name="Edit" value="Edit">
-            <input type="submit" name="Delete" value="Delete" onclick="return confirm('Are You Sure You Want To Delete This Record?')">
-        </form>
-        <h1>Schedule of All Flights</h1>
+        <h4>Search Results</h4>
         <hr>
         <table>
             <tr>
-                <th>ID</th>
+                <th>Flight-ID</th>
                 <th>From</th>
                 <th>To</th>
                 <th>Date</th>
@@ -53,5 +46,9 @@ echo "<tr><td>".$row['ID']."</td>
 ?>
             
         </table>
+        <h5>Please remember the Flight-ID because you will need it for booking</h5>
+        <h5>Check your profile information carefully before booking</h5>
+        <h5>Press the button below to make payment</h5>
+        <a href="<?php echo site_url('auth/pay') ?>" class="waves-effect waves-light btn red"><i class="material-icons right">send</i>Make Payment</a>
     </body>
 </html>

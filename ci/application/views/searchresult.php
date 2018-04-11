@@ -17,7 +17,6 @@ $this->load->view('login');
             <li style="float:right"><a href="<?php echo site_url('admin/logout') ?>">Log Out</a></li>
             <li style="float:right"><a href="#"><?php echo "Signed In As : ".$this->session->userdata['signed']['Name'] ?></a></li>
         </ul>
-        <br>
         <h4>Search Result</h4>
         <hr>
         <table>

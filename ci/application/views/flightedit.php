@@ -63,6 +63,7 @@ $this->load->view('login');
         <ul>
             <li><a href="<?php echo site_url('admin/insert') ?>">Create New Flight Schedule</a></li>
             <li><a href="<?php echo site_url('admin/show') ?>">View All Flights</a></li>
+            <li><a href="<?php echo site_url('admin/search') ?>">Search Flights</a></li>
             <li style="float:right"><a href="<?php echo site_url('admin/logout') ?>">Log Out</a></li>
             <li style="float:right"><a href="#"><?php echo $this->session->userdata['signed']['Name'] ?></a></li>
         </ul>
