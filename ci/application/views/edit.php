@@ -10,7 +10,7 @@ $this->load->view('login');
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
         <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-        <script type = "text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
         <style>
             ul {
                     margin : 0;
@@ -45,6 +45,7 @@ $this->load->view('login');
             <li><a href="<?php echo site_url('auth/show') ?>">View Profile</a></li>
             <li><a href="<?php echo site_url('auth/edit') ?>">Edit Profile</a></li>
             <li><a href="<?php echo site_url('auth/book') ?>">Book Flight</a></li>
+            <li><a href="<?php echo site_url('auth/contact') ?>">Contact Us</a></li>
             <li style="float:right"><a href="<?php echo site_url('auth/logout') ?>">Log Out</a></li>
             <li style="float:right"><a href="#"><?php echo "Signed In As : ".$this->session->userdata['signed']['Name'] ?></a></li>
         </ul>

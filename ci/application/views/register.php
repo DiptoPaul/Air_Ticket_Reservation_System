@@ -13,7 +13,7 @@
         </script>
     </head>
     <body class = "blue-grey darken-3 indigo-text text-lighten-3"  style = "padding : 7% 15%">
-        <h4>Create New Account</h4>
+        <h4>Create New Account <a href="<?php echo site_url('auth/login') ?>">Or Login Here</a></h4>
         <form class="col s12" action = "" method = "POST">
                 <div class="row">
                     <div class="input-field col s4">

@@ -6,7 +6,7 @@ $this->load->view('login');
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Search</title>
+        <title>Contact</title>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
         <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
@@ -40,19 +40,11 @@ $this->load->view('login');
         </style>
         <script>
             $(document).ready(function() {
-                $('.datepicker').pickadate({
-                    selectMonths: true,
-                    selectYears: false,
-                    format: 'yyyy-mm-dd',
-                    today: 'Today',
-                    clear: 'Clear',
-                    close: 'Ok',
-                    closeOnSelect: false
-                });
+                      $('.parallax').parallax();
             });
         </script>
     </head>
-    <body class = "blue-grey darken-3 indigo-text text-lighten-3"  style = "padding : 7% 15%">
+    <body class = "amber-text text-accent-4">
         <ul>
             <li><a href="<?php echo site_url('auth/show') ?>">View Profile</a></li>
             <li><a href="<?php echo site_url('auth/edit') ?>">Edit Profile</a></li>
@@ -61,36 +53,19 @@ $this->load->view('login');
             <li style="float:right"><a href="<?php echo site_url('auth/logout') ?>">Log Out</a></li>
             <li style="float:right"><a href="#"><?php echo "Signed In As : ".$this->session->userdata['signed']['Name'] ?></a></li>
         </ul>
-        <h4>Search Flights</h4>
-        <form class="col s12" action = "" method = "POST">
-                <div class="row">
-                    <div class="input-field col s4">
-                        <i class="material-icons prefix">flight_takeoff</i>
-                        <input id="from" type="text" name="from" class="validate">
-                        <label for="from">From</label>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="input-field col s4">
-                        <i class="material-icons prefix">flight_land</i>
-                        <input id="to" type="text" name="to" class="validate">
-                        <label for="to">To</label>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="input-field col s4">
-                        <i class="material-icons prefix">date_range</i>
-                        <input id="date" type="text" name="date" class="datepicker">
-                        <label for="date">Date</label>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col s4">
-                        <button class="btn waves-effect waves-light blue" type="submit" name="Search">Search
-                            <i class="material-icons left">search</i>
-                        </button>
-                    </div>
-                </div>
-            </form>
-        </body>
-    </html>
+        <div class="parallax-container">
+            <div class="parallax"><img src="https://i.pinimg.com/originals/3b/2a/c1/3b2ac1b813b5cfd93c89906f1e2edb4b.jpg"></div>
+        </div>
+        <div class="section white">
+            <div class="row container">
+                <h2 class = "deep-orange-text">Contact Us</h2>
+                <p>102, Sunset Bridge</p>
+                <p>Toronto, Ontario</p>
+                <p>Canada</p>
+            </div>
+        </div>
+        <div class="parallax-container">
+            <div class="parallax"><img src="https://www.desibucket.com/wp-content/uploads/2017/01/Autumn-Image-1.jpg"></div>
+        </div>
+    </body>
+</html>

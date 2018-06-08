@@ -14,6 +14,7 @@ $this->load->view('login');
             <li><a href="<?php echo site_url('auth/show') ?>">View Profile</a></li>
             <li><a href="<?php echo site_url('auth/edit') ?>">Edit Profile</a></li>
             <li><a href="<?php echo site_url('auth/book') ?>">Book Flight</a></li>
+            <li><a href="<?php echo site_url('auth/contact') ?>">Contact Us</a></li>
             <li style="float:right"><a href="<?php echo site_url('auth/logout') ?>">Log Out</a></li>
             <li style="float:right"><a href="#"><?php echo "Signed In As : ".$this->session->userdata['signed']['Name'] ?></a></li>
         </ul>
